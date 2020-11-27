@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['/dashboard']">Sistema de Matrícula</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Matrícula
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['enrollment/create']">Crear matrícula</a>
+            <a class="dropdown-item" [routerLink]="['enrollment']">Listar matrícula</a>
+            <a class="dropdown-item" [routerLink]="['enrollment/edit']">Actualizar matrícula</a>
+            <a class="dropdown-item" [routerLink]="['enrollment/delete']">Eliminar matrícula</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Usuario
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['user/create']">Crear usuario</a>
+            <a class="dropdown-item" [routerLink]="['user']">Listar usuarios</a>
+            <a class="dropdown-item" [routerLink]="['user/edit']">Actualizar usuario</a>
+            <a class="dropdown-item" [routerLink]="['user/delete']">Eliminar usuario</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cursos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['course/create']">Crear curso</a>
+            <a class="dropdown-item" [routerLink]="['course']">Listar cursos</a>
+            <a class="dropdown-item" [routerLink]="['course/edit']">Actualizar cursos</a>
+            <a class="dropdown-item" [routerLink]="['course/delete']">Eliminar cursos</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a class="nav-link" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div id="col" class="col-md-12 align-middle">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
